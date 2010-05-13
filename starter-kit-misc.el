@@ -103,9 +103,9 @@
 (add-to-list 'auto-mode-alist '("\\.xml$" . nxml-mode))
 
 (eval-after-load 'grep
-  '(progn
-    (add-to-list 'grep-find-ignored-files "target")
-    (add-to-list 'grep-find-ignored-files "*.class")))
+  '(when (boundp 'grep-find-ignored-files) ; missing in Emacs <= 23.1
+     (add-to-list 'grep-find-ignored-files "target")
+     (add-to-list 'grep-find-ignored-files "*.class")))
 
 ;; Default to unified diffs
 (setq diff-switches "-u")
