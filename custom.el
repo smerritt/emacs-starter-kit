@@ -6,6 +6,11 @@
 (global-auto-revert-mode 1)
 (set-cursor-color "black")
 
+(global-set-key [(f6)] 'next-error)
+(global-set-key [(shift f6)] 'previous-error)
+;; on kinesis freestyle, 'Delete' sends kp-delete
+(global-set-key [(control kp-delete)] 'kill-word)
+
 ;; Mac-isms. They do no harm on non-macs.
 (setq mac-option-modifier 'super)
 (setq mac-command-modifier 'meta)
