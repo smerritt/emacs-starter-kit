@@ -60,5 +60,9 @@
 ;; remotely.
 (setq tramp-default-method "ssh")
 
+;;;; spiffy-mode provides a few utilities
+(add-to-list 'load-path "~/.emacs.d/vendor/spiffy")
+(setq spiffy-enable-minor-mode t)
+(require 'spiffy)
 ;;;; configuration chunks too large to just jam in here
 (require 'custom-ruby)

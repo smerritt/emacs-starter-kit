@@ -19,3 +19,7 @@
                             (local-set-key [(?d)] 'd-and-autoindent-end)))
 
 (yas/load-directory "~/.emacs.d/snippets")
+
+(add-to-list 'load-path "~/.emacs.d/vendor/spiffy")
+(require 'spiffy-ruby-mode)
+(add-hook 'ruby-mode-hook 'spiffy-ruby-mode)
