@@ -71,7 +71,7 @@
 ;;;; spiffy-textmate-mode has some good stuff, but I don't want the
 ;;;; full minor mode since it stomps all over a bunch of default keybindings
 (require 'spiffy-textmate-mode)
-(add-hook coding-hook
+(add-hook 'coding-hook
           (lambda ()
             (local-set-key [f5] 'spiffy-tm-grep-project)
             (local-set-key [f8] 'spiffy-tm-open-file-in-project)
