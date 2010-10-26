@@ -5,3 +5,7 @@
 (server-start)
 (global-auto-revert-mode 1)
 
+;; bar cursor makes it easier to see what delete-(backward-)char are going to hit
+(add-to-list 'load-path "~/.emacs.d/vendor/bar-cursor")
+(require 'bar-cursor)
+(bar-cursor-mode 1)
