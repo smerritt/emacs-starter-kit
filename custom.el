@@ -54,3 +54,6 @@
 (setq hippie-expand-try-functions-list (cons 'yas/hippie-try-expand hippie-expand-try-functions-list))
 (global-set-key [(shift tab)] 'hippie-expand)
 (global-set-key [(control tab)] 'hippie-expand)
+
+
+(require 'custom-ruby)
