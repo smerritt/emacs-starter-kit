@@ -31,6 +31,12 @@
 (require 'bar-cursor)
 (bar-cursor-mode 1)
 
+;;;; line numbers on the left in a gui
+(when window-system
+  (add-to-list 'load-path "~/.emacs.d/vendor/linum")
+  (require 'linum)
+  (global-linum-mode 1))
+
 ;;;; Extra packages that the starter kit doesn't give us
 (setq starter-kit-packages
       (append starter-kit-packages (list 'yasnippet-bundle
