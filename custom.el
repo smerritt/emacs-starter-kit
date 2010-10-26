@@ -55,5 +55,10 @@
 (global-set-key [(shift tab)] 'hippie-expand)
 (global-set-key [(control tab)] 'hippie-expand)
 
+;;;; TRAMP configuration
+;; ssh is faster than scp for the small files I usually edit
+;; remotely.
+(setq tramp-default-method "ssh")
 
+;;;; configuration chunks too large to just jam in here
 (require 'custom-ruby)
