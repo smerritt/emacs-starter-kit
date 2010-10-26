@@ -17,3 +17,5 @@
 
 (add-hook 'ruby-mode-hook (lambda ()
                             (local-set-key [(?d)] 'd-and-autoindent-end)))
+
+(yas/load-directory "~/.emacs.d/snippets")
