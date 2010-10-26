@@ -25,3 +25,12 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/bar-cursor")
 (require 'bar-cursor)
 (bar-cursor-mode 1)
+
+;;;; Extra packages that the starter kit doesn't give us
+(setq starter-kit-packages
+      (append starter-kit-packages (list 'yasnippet-bundle
+                                         'clojure-mode
+                                         'paredit
+                                         'haml-mode
+                                         'sass-mode)))
+(starter-kit-elpa-install)
