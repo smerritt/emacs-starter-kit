@@ -39,3 +39,12 @@
                                          'haml-mode
                                          'sass-mode)))
 (starter-kit-elpa-install)
+
+(add-hook 'haml-mode-hook
+          (lambda ()
+            (run-hooks 'coding-hook)))
+
+;;;; tab-completion configuration (hooray hippie-expand)
+(setq hippie-expand-try-functions-list (cons 'yas/hippie-try-expand hippie-expand-try-functions-list))
+(global-set-key [(shift tab)] 'hippie-expand)
+(global-set-key [(control tab)] 'hippie-expand)
