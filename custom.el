@@ -66,8 +66,6 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/spiffy")
 (setq spiffy-enable-minor-mode t)
 (require 'spiffy)
-;;;; configuration chunks too large to just jam in here
-(require 'custom-ruby)
 
 ;;;; spiffy-textmate-mode has some good stuff, but I don't want the
 ;;;; full minor mode since it stomps all over a bunch of default keybindings
@@ -77,3 +75,7 @@
             (local-set-key [f5] 'spiffy-tm-grep-project)
             (local-set-key [f8] 'spiffy-tm-open-file-in-project)
             (local-set-key [(control x) ?4 f8] 'spiffy-tm-open-file-in-project-other-window)))
+
+;;;; configuration chunks too large to just jam in here
+(require 'custom-ruby)
+(require 'custom-color-compilation)
