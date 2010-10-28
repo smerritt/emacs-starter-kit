@@ -10,6 +10,7 @@
 (global-set-key [(f6)] 'next-error)
 (global-set-key [(shift f6)] 'previous-error)
 ;; on kinesis freestyle, 'Delete' sends kp-delete
+(global-set-key [kp-delete] 'delete-char)
 (global-set-key [(control kp-delete)] 'kill-word)
 
 ;; Mac-isms. They do no harm on non-macs.
