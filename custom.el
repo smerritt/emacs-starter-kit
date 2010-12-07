@@ -64,6 +64,11 @@
 ;; remotely.
 (setq tramp-default-method "ssh")
 
+;;;; puppet-mode for editing puppet *.pp files
+(add-to-list 'load-path "~/.emacs.d/vendor/puppet-mode")
+(load "puppet-mode-init.el")
+
+
 ;;;; spiffy-mode provides a few utilities
 (add-to-list 'load-path "~/.emacs.d/vendor/spiffy")
 (setq spiffy-enable-minor-mode t)
