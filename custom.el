@@ -53,6 +53,7 @@
             (run-hooks 'coding-hook)))
 
 (add-to-list 'load-path "~/.emacs.d/vendor/el-expectations")
+(require 'yaml-mode)
 
 ;;;; tab-completion configuration (hooray hippie-expand)
 (setq hippie-expand-try-functions-list (cons 'yas/hippie-try-expand hippie-expand-try-functions-list))
