@@ -74,6 +74,9 @@
 ;;;; puppet-mode for editing puppet *.pp files
 (add-to-list 'load-path "~/.emacs.d/vendor/puppet-mode")
 (load "puppet-mode-init.el")
+(add-hook 'puppet-mode-hook
+          (lambda ()
+            (run-hooks 'coding-hook)))
 
 
 ;;;; spiffy-mode provides a few utilities
