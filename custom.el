@@ -96,3 +96,4 @@
 ;;;; configuration chunks too large to just jam in here
 (require 'custom-ruby)
 (require 'custom-color-compilation)
+(require 'custom-causes)
