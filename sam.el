@@ -4,9 +4,18 @@
 ;;
 
 (setq internal-hosts '("rebound01"
+                       "duckweed01"
                        "sandbox01"
                        "tsaa01"
+                       "tsaa10"
                        "tsaa12"
+                       "tsaa16"
+                       "caumng01"
+                       "caumng02"
+                       "caumng03"
+                       "caumng04"
+                       "caumng05"
+                       "caumng06"
                        "caumng01"
                        "cauapp21"
                        "cauapp22"
@@ -31,6 +40,7 @@
                        "worker01"
                        "worker02"
                        "worker03"
+                       "caujob01"
                        "tsaa69"
                        "partner01"
                        "partner02"
@@ -45,6 +55,10 @@
                        "wishes09"
                        "wishes10"
                        "blog01"
+                       "staging-cauapp01"
+                       "staging-cauutl01"
+                       "staging-ansapp01"
+                       "staging-ansutl01"
                        "pmta01"
                        "pmta03"))
 
@@ -53,11 +67,11 @@
                        (list host nil "/ssh:root@util1:")))
         internal-hosts)
 
-(add-to-list 'tramp-default-proxies-alist
-             '("util1" nil "/ssh:caketown.causes.com:"))
 
 ;; can't ssh to root@devbox directly; have to sudo
 (add-to-list 'tramp-default-proxies-alist
              '("devbox" "root" "/ssh:%h:"))
+(add-to-list 'tramp-default-proxies-alist
+             '("meat" "root" "/ssh:%h:"))
 
 (color-theme-twilight)
