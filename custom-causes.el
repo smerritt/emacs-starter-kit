@@ -31,11 +31,11 @@
 
 (defun reload-causes ()
   (interactive)
-  (compile-on-devbox "sudo monit restart all"))
+  (compile-on-devbox "touch ~/causes/tmp/restart.txt"))
 
 (defun reload-wishes ()
   (interactive)
-  (compile-on-devbox "sudo /etc/init.d/nginx reload"))
+  (compile-on-devbox "touch ~/wishes/tmp/restart.txt"))
 
 (global-set-key [(control ?\;) ?r ?c] 'reload-causes)
 (global-set-key [(control ?\;) ?r ?w] 'reload-wishes)
