@@ -78,6 +78,16 @@
           (lambda ()
             (run-hooks 'coding-hook)))
 
+;;;; js-mode for javascript, not espresso-mode (espresso-mode is old
+;;;; and busted)
+(setq auto-mode-alist (append '(("\\.js" . js-mode))
+                              auto-mode-alist))
+(add-hook 'js-mode-hook
+          (lambda ()
+            (run-hooks 'coding-hook)))
+(add-hook 'js-mode-hook
+          (lambda ()
+            (setq js-indent-level 2)))
 
 ;;;; spiffy-mode provides a few utilities
 (add-to-list 'load-path "~/.emacs.d/vendor/spiffy")
