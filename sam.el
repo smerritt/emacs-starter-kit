@@ -1,7 +1,9 @@
 ;; Internal boxes only reachable via two hops.
 ;;
-;; internet --> caketown (office) --> util1 (dc bastion host) --> box
+;; internet --> kearny (office) --> util1 (dc bastion host) --> box
 ;;
+
+(require 'tramp)
 
 (setq internal-hosts '("rebound01"
                        "duckweed01"
