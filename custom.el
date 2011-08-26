@@ -45,7 +45,8 @@
                                          'clojure-mode
                                          'paredit
                                          'haml-mode
-                                         'sass-mode)))
+                                         'sass-mode
+                                         'slime)))
 (starter-kit-elpa-install)
 
 (add-hook 'haml-mode-hook
@@ -55,6 +56,8 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/el-expectations")
 (require 'yaml-mode)
 
+(add-to-list 'load-path "~/.emacs.d/vendor/clojure-mode")
+(require 'clojure-mode)
 
 (add-to-list 'load-path "~/.emacs.d/vendor/rpm-spec-mode")
 (autoload 'rpm-spec-mode "rpm-spec-mode.el" "RPM spec mode." t)
