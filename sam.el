@@ -76,4 +76,7 @@
 (add-to-list 'tramp-default-proxies-alist
              '("meat" "root" "/ssh:%h:"))
 
+(add-to-list 'tramp-default-proxies-alist
+             '("meat" "root" "/ssh:%h:"))
+
 (color-theme-twilight)

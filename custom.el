@@ -43,6 +43,8 @@
 (setq starter-kit-packages
       (append starter-kit-packages (list 'yasnippet-bundle
                                          'clojure-mode
+                                         'slime
+                                         'slime-repl
                                          'paredit
                                          'haml-mode
                                          'sass-mode
